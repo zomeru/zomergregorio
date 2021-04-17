@@ -1,0 +1,109 @@
+section {
+    width: 70%;
+    min-height: 100vh;
+    margin: 12rem auto 0 auto;
+    //smargin-top: 15rem;
+    font-size: 1.6rem;
+    font-family: var(--font-sans);
+
+    &:not(:last-of-type) {
+        margin-bottom: 12rem;
+    }
+}
+
+.section {
+
+    &__about{
+        
+        &-content {
+            display: flex;
+            //letter-spacing: ;
+
+            &--text {
+                flex: 0 0 55%;
+
+                & > * {
+                    margin-top: 3rem;
+                }
+
+                .skill {
+                    display: flex;
+                    flex-wrap: wrap;
+                    
+                    &__item {
+                        font-family: var(--font-mono);
+                        font-size: 1.4rem;
+                        flex: 0 0 50%;
+                        
+                        &::before {
+                            content: "▹";
+                            color: var(--color-cyan-lightest);
+                            margin-right: 1.5rem;
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+
+            .img-box {
+                margin-top: 3rem;
+                margin-left: 5rem;
+                width: 20vw;
+                max-height: 20vw;
+                position: relative;
+                border-radius: var(--border-radius);
+
+                &::after {
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    border: 2px dashed var(--color-cyan-lightest);
+                    border-radius: var(--border-radius);
+                    display: block;
+                    position: absolute;
+                    top: 3rem;
+                    left: 3rem;
+                    z-index: 1;
+                    transition: all .2s;
+                }
+
+                &:hover::after {
+                    top: 2rem;
+                    left: 2rem;
+                }
+
+                &__tint {
+                    background-color: rgba(#91E4E6, 1);
+                    mix-blend-mode: hue;
+                    height: 100%;
+                    width: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    transition: all .2s;
+                    z-index: 9;
+                    border-radius: var(--border-radius);
+
+                    &:hover {
+                        background-color: rgba(#91E4E6, 0);
+                    }
+                }
+
+                &__img {
+                    width: 100%;
+                    height: auto;
+                    position: relative;
+                    z-index: 8;
+                    border-radius: var(--border-radius);
+                    
+                }
+            }
+        }
+    }
+
+    &-contact {
+        height: 70vh;
+        width: 50%;
+        text-align: center;
+    }
+}

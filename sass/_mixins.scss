@@ -1,0 +1,10 @@
+
+@mixin textHoverActive {
+    transform: translateY(-3px);
+    color: var(--color-cyan-lightest);
+}
+
+@mixin textActiveFocus {
+    color: var(--color-cyan-lightest);
+    border: 2px dashed var(--color-cyan-lightest);
+}

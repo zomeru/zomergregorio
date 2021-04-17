@@ -1,0 +1,41 @@
+.header {
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(#020c1b, .93), rgba(#020c1b, .93)), url(../img/Codes.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+    &__text-box {
+        width: 70%;
+        margin: 0 15%;
+        position: absolute;
+        top: 25%;
+        line-height: 1.5;
+        // left: 40%;
+        // transform: translate(-50%, -50%);
+        //transform: translateY(100%);
+
+        &--small {
+            color: var(--color-cyan-lightest);
+            font-size: clam(1.1rem, 3vw, 1.2rem);
+            font-family: var(--font-mono);
+            text-transform: uppercase;
+        }
+
+        &--large {
+            font-size: clamp(3rem, 6vw, 7rem);
+            color: var(--color-slate-lightest);
+        }
+
+        &--big {
+            font-size: clamp(2.5rem, 5vw, 6rem);
+        }
+
+        .notice {
+            color: rgb(202, 82, 82);
+            font-size: clamp(2rem, 3vw, 2.5rem);
+            transform: translate(20rem, -2rem);
+        }
+
+    }
+}

@@ -1,0 +1,27 @@
+.footer {
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 1.4rem;
+    font-family: var(--font-mono);
+    color: var(--color-slate-dark);
+    margin-bottom: 1rem;
+
+
+    &__link {
+        text-decoration: none;
+        color: var(--color-slate-light);
+        padding: 1rem 2rem;
+        width: 100%;
+        transition: all .2s;
+
+        &:hover,
+        &:active {
+            @include textHoverActive;
+        }
+
+        &:active,
+        &:focus {
+            @include textActiveFocus;
+        }
+    }
+}
