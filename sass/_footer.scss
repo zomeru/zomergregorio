@@ -4,24 +4,65 @@
     font-size: 1.4rem;
     font-family: var(--font-mono);
     color: var(--color-slate-dark);
+    margin: 0 auto;
     margin-bottom: 1rem;
+    
+
+    &__text {
+        margin: 0 auto;
+        padding: 1rem 2rem;
+        transition: all .2s;
+        width: 40rem;
+
+        &:active,
+        &:focus {
+            @include textActiveFocus;
+        }
+    }
 
 
     &__link {
         text-decoration: none;
         color: var(--color-slate-light);
-        padding: 1rem 2rem;
-        width: 100%;
-        transition: all .2s;
 
         &:hover,
         &:active {
             @include textHoverActive;
         }
+    }
 
-        &:active,
-        &:focus {
-            @include textActiveFocus;
+    // for small screen
+
+    &-social {
+        font-size: 2.3rem;
+        display: flex;
+        justify-content: center;
+
+        visibility: hidden;
+
+        @media only screen and (max-width: $bp-small) {
+            visibility: visible;
+        }
+
+        &__link {
+            padding: .5rem 1rem;
+            text-decoration: none;
+            color: var(--color-slate-dark);
+            transition: all .2s;
+
+            &:not(:last-child) {
+                margin-right: 2rem;
+            }
+
+            &:hover,
+            &:active {
+                @include textHoverActive;
+            }
+
+            &:active,
+            &:focus {
+                @include textActiveFocus;
+            }
         }
     }
 }

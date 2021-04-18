@@ -1,11 +1,15 @@
 @import "mixins";
-@import "base";
-@import "components";
-@import "header";
-@import "intro";
-@import "navigation";
-@import "section";
-@import "side-links";
-@import "typography";
 @import "utilities";
+@import "base";
+@import "typography";
+@import "components";
+
+@import "intro";
+@import "side-links";
+@import "navigation";
+@import "header";
+@import "section";
 @import "footer";
+
+
+

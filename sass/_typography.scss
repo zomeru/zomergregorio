@@ -17,11 +17,15 @@
         display: inline-block;
         margin-left: 2rem;
         transform: translateY(-1rem);
+
+        @media only screen and (max-width: $bp-small) {
+            width: 40vw;
+        }
     }
 }
 
 .heading-title {
-    font-size: 6rem;
+    font-size: clamp(2.5rem, 5vw, 6rem);
     color: var(--color-slate-lightest);
 
 }

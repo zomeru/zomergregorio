@@ -1,19 +1,32 @@
 .header {
     min-height: 100vh;
-    background-image: linear-gradient(rgba(#020c1b, .93), rgba(#020c1b, .93)), url(../img/Codes.jpg);
+    background-image: linear-gradient(rgba(#020c1b, .95), rgba(#020c1b, .95)), url(../img/Codes.jpg);
     background-position: center;
     background-size: cover;
-    position: relative;
+
+    @media only screen and (max-width: $bp-x-small) {
+        min-height: 80vh;
+    }
 
     &__text-box {
         width: 70%;
-        margin: 0 15%;
-        position: absolute;
-        top: 25%;
+        margin: 0 auto;
+        //position: absolute;
+        //top: 25%;
+        transform: translateY(25vh);
         line-height: 1.5;
         // left: 40%;
         // transform: translate(-50%, -50%);
         //transform: translateY(100%);
+
+        @media only screen and (min-width: $bp-huge) {
+            max-width: 160rem;
+            margin: 0 auto;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            width: 85%;
+        }
 
         &--small {
             color: var(--color-cyan-lightest);
@@ -29,12 +42,6 @@
 
         &--big {
             font-size: clamp(2.5rem, 5vw, 6rem);
-        }
-
-        .notice {
-            color: rgb(202, 82, 82);
-            font-size: clamp(2rem, 3vw, 2.5rem);
-            transform: translate(20rem, -2rem);
         }
 
     }

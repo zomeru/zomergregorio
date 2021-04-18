@@ -35,6 +35,12 @@
 
 }
 
+$bp-huge: 123.75em; // 1980px
+$bp-medium: 56.26em; // 900px
+$bp-small: 43.75em;  // 700px
+$bp-x-small: 25em;  // 400px
+
+
 *,
 *::before,
 *::after {
@@ -47,6 +53,19 @@ html {
     font-size: 62.5%;
     scroll-behavior: smooth;
     scroll-padding-top: 6rem;
+
+    @media only screen and (max-width: $bp-medium) {
+        //font-size: 56.25%;
+        font-size: 50%; // 8px
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        font-size: 43.75%; // 7px
+    }
+
+    @media only screen and (max-width: $bp-x-small) {
+        font-size: 37.5%; // 6px
+    }
 }
 
 body {
@@ -56,6 +75,10 @@ body {
     font-weight: 300;
     line-height: 1.6;
     color: var(--color-slate-dark);
+}
+
+main {
+    position: relative;
 }
 
 ::selection {
