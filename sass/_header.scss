@@ -13,8 +13,8 @@
         margin: 0 auto;
         //position: absolute;
         //top: 25%;
-        transform: translateY(25vh);
-        line-height: 1.5;
+        transform: translateY(20vh);
+        line-height: 1.4;
         // left: 40%;
         // transform: translate(-50%, -50%);
         //transform: translateY(100%);
@@ -36,12 +36,16 @@
         }
 
         &--large {
-            font-size: clamp(3rem, 6vw, 7rem);
+            font-size: clamp(5rem, 6vw, 7rem);
             color: var(--color-slate-lightest);
         }
 
         &--big {
-            font-size: clamp(2.5rem, 5vw, 6rem);
+            font-size: clamp(4rem, 5vw, 6rem);
+        }
+
+        .paragraph {
+            margin-bottom: 8rem;
         }
 
     }

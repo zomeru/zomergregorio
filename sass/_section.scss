@@ -1,6 +1,6 @@
 section {
     width: 70%;
-    min-height: 100vh;
+    //min-height: 100vh;
     margin: 15rem auto 0 auto;
     //smargin-top: 15rem;
     font-size: 1.6rem;
@@ -123,9 +123,10 @@ section {
     }
 
     &-contact {
-        height: 70vh;
+        //height: 70vh;
         width: 50%;
         text-align: center;
+        margin-bottom: 15rem;
 
         @media only screen and (max-width: $bp-small) {
             width: 70%;
