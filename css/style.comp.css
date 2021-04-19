@@ -63,16 +63,15 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
-  scroll-padding-top: 6rem; }
+  scroll-padding-top: 6rem;
+  /*
+    @media only screen and (max-width: $bp-x-small) {
+        font-size: 37.5%; // 6px
+    }
+    */ }
   @media only screen and (max-width: 56.26em) {
     html {
       font-size: 50%; } }
-  @media only screen and (max-width: 43.75em) {
-    html {
-      font-size: 43.75%; } }
-  @media only screen and (max-width: 25em) {
-    html {
-      font-size: 37.5%; } }
 
 body {
   box-sizing: border-box;
@@ -109,7 +108,7 @@ main {
         width: 40vw; } }
 
 .heading-title {
-  font-size: clamp(2.5rem, 5vw, 6rem);
+  font-size: clamp(5rem, 6vw, 6rem);
   color: var(--color-slate-lightest); }
 
 .heading-second-colored {
@@ -241,7 +240,8 @@ main {
   position: relative; }
   @media only screen and (max-width: 43.75em) {
     .nav {
-      background-color: transparent; } }
+      background-color: transparent;
+      padding: 2rem 3rem; } }
   .nav svg {
     position: relative;
     width: 100%;
@@ -250,6 +250,10 @@ main {
     margin: 0 auto;
     fill: none;
     transition: fill 1s; }
+    @media only screen and (max-width: 37.5em) {
+      .nav svg {
+        width: 110%;
+        height: 110%; } }
     .nav svg * {
       font-family: var(--font-sans); }
     .nav svg:hover {
@@ -288,9 +292,6 @@ main {
   right: 3rem;
   top: 3rem;
   visibility: hidden; }
-  @media only screen and (max-width: 43.75em) {
-    .navigation-small {
-      visibility: visible; } }
   .navigation-small__checkbox {
     display: none; }
   .navigation-small__button {
@@ -396,8 +397,8 @@ main {
   .header__text-box {
     width: 70%;
     margin: 0 auto;
-    transform: translateY(25vh);
-    line-height: 1.5; }
+    transform: translateY(20vh);
+    line-height: 1.4; }
     @media only screen and (min-width: 123.75em) {
       .header__text-box {
         max-width: 160rem;
@@ -411,14 +412,15 @@ main {
       font-family: var(--font-mono);
       text-transform: uppercase; }
     .header__text-box--large {
-      font-size: clamp(3rem, 6vw, 7rem);
+      font-size: clamp(5rem, 6vw, 7rem);
       color: var(--color-slate-lightest); }
     .header__text-box--big {
-      font-size: clamp(2.5rem, 5vw, 6rem); }
+      font-size: clamp(4rem, 5vw, 6rem); }
+    .header__text-box .paragraph {
+      margin-bottom: 8rem; }
 
 section {
   width: 70%;
-  min-height: 100vh;
   margin: 15rem auto 0 auto;
   font-size: 1.6rem;
   font-family: var(--font-sans); }
@@ -502,9 +504,9 @@ section {
       border-radius: var(--border-radius); }
 
 .section-contact {
-  height: 70vh;
   width: 50%;
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 15rem; }
   @media only screen and (max-width: 43.75em) {
     .section-contact {
       width: 70%; } }
@@ -514,7 +516,7 @@ section {
 
 .footer {
   text-align: center;
-  padding: 2rem 0;
+  padding: 1.5rem 0;
   font-size: 1.4rem;
   font-family: var(--font-mono);
   color: var(--color-slate-dark);
